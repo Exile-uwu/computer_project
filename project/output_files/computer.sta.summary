@@ -1,0 +1,109 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup '8-register:IR|inst2'
+Slack : -8.279
+TNS   : -61.884
+
+Type  : Slow Model Setup '8-register:IR|inst6'
+Slack : -7.973
+TNS   : -61.699
+
+Type  : Slow Model Setup '8-register:IR|inst4'
+Slack : -7.841
+TNS   : -58.351
+
+Type  : Slow Model Setup 'HALF'
+Slack : -5.818
+TNS   : -124.620
+
+Type  : Slow Model Hold 'HALF'
+Slack : -7.429
+TNS   : -171.554
+
+Type  : Slow Model Hold '8-register:IR|inst4'
+Slack : -1.639
+TNS   : -10.813
+
+Type  : Slow Model Hold '8-register:IR|inst6'
+Slack : -1.285
+TNS   : -7.465
+
+Type  : Slow Model Hold '8-register:IR|inst2'
+Slack : -1.198
+TNS   : -7.280
+
+Type  : Slow Model Minimum Pulse Width 'START'
+Slack : -1.941
+TNS   : -3.425
+
+Type  : Slow Model Minimum Pulse Width 'HALF'
+Slack : -1.777
+TNS   : -73.009
+
+Type  : Slow Model Minimum Pulse Width '8-register:IR|inst2'
+Slack : -0.742
+TNS   : -11.872
+
+Type  : Slow Model Minimum Pulse Width '8-register:IR|inst4'
+Slack : -0.742
+TNS   : -11.872
+
+Type  : Slow Model Minimum Pulse Width '8-register:IR|inst6'
+Slack : -0.742
+TNS   : -11.872
+
+Type  : Fast Model Setup '8-register:IR|inst2'
+Slack : -2.210
+TNS   : -16.273
+
+Type  : Fast Model Setup '8-register:IR|inst6'
+Slack : -2.134
+TNS   : -16.404
+
+Type  : Fast Model Setup '8-register:IR|inst4'
+Slack : -2.056
+TNS   : -14.985
+
+Type  : Fast Model Setup 'HALF'
+Slack : -1.543
+TNS   : -17.932
+
+Type  : Fast Model Hold 'HALF'
+Slack : -3.062
+TNS   : -75.983
+
+Type  : Fast Model Hold '8-register:IR|inst4'
+Slack : -1.039
+TNS   : -7.703
+
+Type  : Fast Model Hold '8-register:IR|inst6'
+Slack : -0.906
+TNS   : -6.284
+
+Type  : Fast Model Hold '8-register:IR|inst2'
+Slack : -0.879
+TNS   : -6.415
+
+Type  : Fast Model Minimum Pulse Width 'START'
+Slack : -1.380
+TNS   : -2.380
+
+Type  : Fast Model Minimum Pulse Width 'HALF'
+Slack : -1.222
+TNS   : -49.222
+
+Type  : Fast Model Minimum Pulse Width '8-register:IR|inst2'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Fast Model Minimum Pulse Width '8-register:IR|inst4'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Fast Model Minimum Pulse Width '8-register:IR|inst6'
+Slack : -0.500
+TNS   : -8.000
+
+------------------------------------------------------------

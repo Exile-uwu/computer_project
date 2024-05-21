@@ -1,0 +1,117 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+# Date created = 19:57:58  May 19, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		computer_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C8Q208C8
+set_global_assignment -name TOP_LEVEL_ENTITY computer
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:57:58  MAY 19, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE computer.bdf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_168 -to MAR0
+set_location_assignment PIN_169 -to MAR1
+set_location_assignment PIN_170 -to MAR2
+set_location_assignment PIN_171 -to MAR3
+set_location_assignment PIN_173 -to MAR4
+set_location_assignment PIN_175 -to MAR5
+set_location_assignment PIN_176 -to MAR6
+set_location_assignment PIN_179 -to MAR7
+set_location_assignment PIN_192 -to MDR0
+set_location_assignment PIN_193 -to MDR1
+set_location_assignment PIN_195 -to MDR2
+set_location_assignment PIN_197 -to MDR3
+set_location_assignment PIN_198 -to MDR4
+set_location_assignment PIN_199 -to MDR5
+set_location_assignment PIN_200 -to MDR6
+set_location_assignment PIN_201 -to MDR7
+set_location_assignment PIN_131 -to PULSE
+set_location_assignment PIN_63 -to RD
+set_location_assignment PIN_132 -to START
+set_location_assignment PIN_206 -to CLR
+set_location_assignment PIN_61 -to CPuir
+set_location_assignment PIN_60 -to urd
+set_location_assignment PIN_64 -to WR
+set_location_assignment PIN_180 -to UPC0
+set_location_assignment PIN_181 -to UPC1
+set_location_assignment PIN_182 -to UPC2
+set_location_assignment PIN_185 -to UPC3
+set_location_assignment PIN_187 -to UPC4
+set_location_assignment PIN_188 -to UPC5
+set_location_assignment PIN_189 -to UPC6
+set_location_assignment PIN_191 -to UPC7
+set_location_assignment PIN_142 -to L0
+set_location_assignment PIN_143 -to L1
+set_location_assignment PIN_144 -to L2
+set_location_assignment PIN_145 -to L3
+set_location_assignment PIN_146 -to L4
+set_location_assignment PIN_147 -to L5
+set_location_assignment PIN_149 -to L6
+set_location_assignment PIN_150 -to L7
+set_location_assignment PIN_94 -to HALF
+set_location_assignment PIN_90 -to I1
+set_location_assignment PIN_92 -to I2
+set_location_assignment PIN_95 -to JP
+set_location_assignment PIN_96 -to QJP
+set_location_assignment PIN_101 -to SelectAA
+set_location_assignment PIN_102 -to SelectAB
+set_location_assignment PIN_103 -to SelectBA
+set_location_assignment PIN_104 -to SelectBB
+set_location_assignment PIN_99 -to W/R
+set_location_assignment PIN_97 -to PCadd
+set_location_assignment PIN_89 -to I0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_34 -to L8
+set_location_assignment PIN_35 -to L9
+set_location_assignment PIN_37 -to L10
+set_location_assignment PIN_39 -to L11
+set_location_assignment PIN_40 -to L12
+set_location_assignment PIN_41 -to L13
+set_location_assignment PIN_43 -to L14
+set_location_assignment PIN_44 -to L15

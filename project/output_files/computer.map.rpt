@@ -1,0 +1,493 @@
+Analysis & Synthesis report for computer
+Tue May 21 02:31:58 2024
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Parameter Settings for User Entity Instance: upc:PC|74161:inst
+ 11. Parameter Settings for User Entity Instance: upc:PC|74161:inst1
+ 12. Parameter Settings for User Entity Instance: upc:ROMupc|74161:inst
+ 13. Parameter Settings for User Entity Instance: upc:ROMupc|74161:inst1
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue May 21 02:31:58 2024       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; computer                                    ;
+; Top-level Entity Name              ; computer                                    ;
+; Family                             ; Cyclone II                                  ;
+; Total logic elements               ; 121                                         ;
+;     Total combinational functions  ; 80                                          ;
+;     Dedicated logic registers      ; 73                                          ;
+; Total registers                    ; 73                                          ;
+; Total pins                         ; 59                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C8Q208C8        ;                    ;
+; Top-level entity name                                                      ; computer           ; computer           ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-20        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; computer.bdf                     ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Exile/Desktop/computer_project-main/computer_project-main/project/computer.bdf          ;         ;
+; 8-register.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Exile/Desktop/computer_project-main/computer_project-main/project/8-register.bdf        ;         ;
+; start.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Exile/Desktop/computer_project-main/computer_project-main/project/start.bdf             ;         ;
+; 3-8.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Exile/Desktop/computer_project-main/computer_project-main/project/3-8.bdf               ;         ;
+; alu.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Exile/Desktop/computer_project-main/computer_project-main/project/alu.bdf               ;         ;
+; 74181.bdf                        ; yes             ; Megafunction                             ; c:/altera/13.0/quartus/libraries/others/maxplus2/74181.bdf                                       ;         ;
+; 74182.bdf                        ; yes             ; Megafunction                             ; c:/altera/13.0/quartus/libraries/others/maxplus2/74182.bdf                                       ;         ;
+; selector.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Exile/Desktop/computer_project-main/computer_project-main/project/selector.bdf          ;         ;
+; 4-registers-group.bdf            ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Exile/Desktop/computer_project-main/computer_project-main/project/4-registers-group.bdf ;         ;
+; upc.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Exile/Desktop/computer_project-main/computer_project-main/project/upc.bdf               ;         ;
+; 74161.tdf                        ; yes             ; Megafunction                             ; c:/altera/13.0/quartus/libraries/others/maxplus2/74161.tdf                                       ;         ;
+; aglobal.inc                      ; yes             ; Megafunction                             ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal.inc                                       ;         ;
+; f74161.bdf                       ; yes             ; Megafunction                             ; c:/altera/13.0/quartus/libraries/others/maxplus2/f74161.bdf                                      ;         ;
+; tri-door.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Exile/Desktop/computer_project-main/computer_project-main/project/tri-door.bdf          ;         ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 121   ;
+;                                             ;       ;
+; Total combinational functions               ; 80    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 48    ;
+;     -- 3 input functions                    ; 23    ;
+;     -- <=2 input functions                  ; 9     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 80    ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 73    ;
+;     -- Dedicated logic registers            ; 73    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 59    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLR   ;
+; Maximum fan-out                             ; 65    ;
+; Total fan-out                               ; 555   ;
+; Average fan-out                             ; 2.62  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
+; |computer                    ; 80 (5)            ; 73 (0)       ; 0           ; 0            ; 0       ; 0         ; 59   ; 0            ; |computer                                              ;              ;
+;    |4-registers-group:inst2| ; 12 (1)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|4-registers-group:inst2                      ;              ;
+;       |8-register:register0| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|4-registers-group:inst2|8-register:register0 ;              ;
+;       |8-register:register1| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|4-registers-group:inst2|8-register:register1 ;              ;
+;       |8-register:register2| ; 11 (11)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|4-registers-group:inst2|8-register:register2 ;              ;
+;       |8-register:register3| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|4-registers-group:inst2|8-register:register3 ;              ;
+;    |8-register:IR|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|8-register:IR                                ;              ;
+;    |8-register:MAR|          ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|8-register:MAR                               ;              ;
+;    |8-register:MDR|          ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|8-register:MDR                               ;              ;
+;    |ALU:1ALU|                ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|ALU:1ALU                                     ;              ;
+;       |74181:inst1|          ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|ALU:1ALU|74181:inst1                         ;              ;
+;       |74181:inst|           ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|ALU:1ALU|74181:inst                          ;              ;
+;    |selector:SelectorA|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|selector:SelectorA                           ;              ;
+;    |selector:SelectorB|      ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|selector:SelectorB                           ;              ;
+;    |selector:SelectorC|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|selector:SelectorC                           ;              ;
+;    |start:1Start|            ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|start:1Start                                 ;              ;
+;    |upc:PC|                  ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:PC                                       ;              ;
+;       |74161:inst1|          ; 6 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:PC|74161:inst1                           ;              ;
+;          |f74161:sub|        ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:PC|74161:inst1|f74161:sub                ;              ;
+;       |74161:inst|           ; 4 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:PC|74161:inst                            ;              ;
+;          |f74161:sub|        ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:PC|74161:inst|f74161:sub                 ;              ;
+;    |upc:ROMupc|              ; 13 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:ROMupc                                   ;              ;
+;       |74161:inst1|          ; 8 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:ROMupc|74161:inst1                       ;              ;
+;          |f74161:sub|        ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:ROMupc|74161:inst1|f74161:sub            ;              ;
+;       |74161:inst|           ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:ROMupc|74161:inst                        ;              ;
+;          |f74161:sub|        ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|upc:ROMupc|74161:inst|f74161:sub             ;              ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 73    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 73    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------+
+; Inverted Register Statistics                                  ;
++-----------------------------------------------------+---------+
+; Inverted Register                                   ; Fan out ;
++-----------------------------------------------------+---------+
+; 8-register:MAR|inst14                               ; 1       ;
+; 8-register:MDR|inst14                               ; 3       ;
+; 4-registers-group:inst2|8-register:register2|inst14 ; 2       ;
+; 4-registers-group:inst2|8-register:register1|inst14 ; 1       ;
+; 4-registers-group:inst2|8-register:register3|inst14 ; 1       ;
+; 4-registers-group:inst2|8-register:register0|inst14 ; 1       ;
+; 8-register:IR|inst14                                ; 1       ;
+; Total number of inverted registers = 7              ;         ;
++-----------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: upc:PC|74161:inst ;
++------------------------+------------+--------------------------+
+; Parameter Name         ; Value      ; Type                     ;
++------------------------+------------+--------------------------+
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE           ;
++------------------------+------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: upc:PC|74161:inst1 ;
++------------------------+------------+---------------------------+
+; Parameter Name         ; Value      ; Type                      ;
++------------------------+------------+---------------------------+
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                   ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE            ;
++------------------------+------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: upc:ROMupc|74161:inst ;
++------------------------+------------+------------------------------+
+; Parameter Name         ; Value      ; Type                         ;
++------------------------+------------+------------------------------+
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                      ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE               ;
++------------------------+------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: upc:ROMupc|74161:inst1 ;
++------------------------+------------+-------------------------------+
+; Parameter Name         ; Value      ; Type                          ;
++------------------------+------------+-------------------------------+
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                       ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                ;
++------------------------+------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Tue May 21 02:31:57 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off computer -c computer
+Info (11104): Parallel Compilation has detected 20 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 14 of the 14 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file computer.bdf
+    Info (12023): Found entity 1: computer
+Info (12127): Elaborating entity "computer" for the top level hierarchy
+Warning (12125): Using design file 8-register.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 8-register
+Info (12128): Elaborating entity "8-register" for hierarchy "8-register:MAR"
+Warning (12125): Using design file start.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: start
+Info (12128): Elaborating entity "start" for hierarchy "start:1Start"
+Warning (12125): Using design file 3-8.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 3-8
+Info (12128): Elaborating entity "3-8" for hierarchy "3-8:3-8Selector"
+Warning (12125): Using design file alu.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALU
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:1ALU"
+Info (12128): Elaborating entity "74181" for hierarchy "ALU:1ALU|74181:inst"
+Info (12130): Elaborated megafunction instantiation "ALU:1ALU|74181:inst"
+Info (12128): Elaborating entity "74182" for hierarchy "ALU:1ALU|74182:inst4"
+Info (12130): Elaborated megafunction instantiation "ALU:1ALU|74182:inst4"
+Warning (12125): Using design file selector.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: selector
+Info (12128): Elaborating entity "selector" for hierarchy "selector:SelectorA"
+Warning (12125): Using design file 4-registers-group.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 4-registers-group
+Info (12128): Elaborating entity "4-registers-group" for hierarchy "4-registers-group:inst2"
+Warning (12125): Using design file upc.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: upc
+Info (12128): Elaborating entity "upc" for hierarchy "upc:PC"
+Info (12128): Elaborating entity "74161" for hierarchy "upc:PC|74161:inst"
+Info (12130): Elaborated megafunction instantiation "upc:PC|74161:inst"
+Info (12128): Elaborating entity "f74161" for hierarchy "upc:PC|74161:inst|f74161:sub"
+Info (12131): Elaborated megafunction instantiation "upc:PC|74161:inst|f74161:sub", which is child of megafunction instantiation "upc:PC|74161:inst"
+Info (12128): Elaborating entity "74161" for hierarchy "upc:PC|74161:inst1"
+Info (12130): Elaborated megafunction instantiation "upc:PC|74161:inst1"
+Warning (12125): Using design file tri-door.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: tri-door
+Info (12128): Elaborating entity "tri-door" for hierarchy "tri-door:tri-door"
+Info (13014): Ignored 40 buffer(s)
+    Info (13015): Ignored 16 CARRY buffer(s)
+    Info (13019): Ignored 24 SOFT buffer(s)
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "8-register:IR|inst1" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "8-register:IR|inst9" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "8-register:IR|inst11" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "8-register:IR|inst13" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "8-register:IR|inst15" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "4-registers-group:inst2|8-register:register0|inst1" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "4-registers-group:inst2|8-register:register0|inst3" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "4-registers-group:inst2|8-register:register0|inst5" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "4-registers-group:inst2|8-register:register0|inst7" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "4-registers-group:inst2|8-register:register0|inst9" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "4-registers-group:inst2|8-register:register0|inst11" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "4-registers-group:inst2|8-register:register0|inst13" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "4-registers-group:inst2|8-register:register0|inst15" feeding internal logic into a wire
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MAR|inst1" to the node "MAR0" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MAR|inst3" to the node "MAR1" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MAR|inst5" to the node "MAR2" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MAR|inst7" to the node "MAR3" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MAR|inst9" to the node "MAR4" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MAR|inst11" to the node "MAR5" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MAR|inst13" to the node "MAR6" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MAR|inst15" to the node "MAR7" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst1" to the node "L0" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst3" to the node "L1" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst5" to the node "L2" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst7" to the node "L3" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst9" to the node "L4" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst11" to the node "L5" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst13" to the node "L6" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst15" to the node "L7" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst1" to the node "selector:SelectorA|inst1" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst3" to the node "selector:SelectorA|inst2" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst5" to the node "selector:SelectorA|inst3" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst7" to the node "selector:SelectorA|inst10" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst9" to the node "selector:SelectorA|inst13" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst11" to the node "selector:SelectorA|inst16" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst13" to the node "selector:SelectorA|inst19" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "8-register:MDR|inst15" to the node "selector:SelectorA|inst22" into a wire
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst5" to the node "4-registers-group:inst2|8-register:register2|inst1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst5" to the node "4-registers-group:inst2|8-register:register2|inst3" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst5" to the node "4-registers-group:inst2|8-register:register2|inst5" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst5" to the node "4-registers-group:inst2|8-register:register2|inst7" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst5" to the node "4-registers-group:inst2|8-register:register2|inst9" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst5" to the node "4-registers-group:inst2|8-register:register2|inst11" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst5" to the node "4-registers-group:inst2|8-register:register2|inst13" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst5" to the node "4-registers-group:inst2|8-register:register2|inst15" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst7" to the node "4-registers-group:inst2|8-register:register3|inst1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst7" to the node "4-registers-group:inst2|8-register:register3|inst3" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst7" to the node "4-registers-group:inst2|8-register:register3|inst5" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst7" to the node "4-registers-group:inst2|8-register:register3|inst7" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst7" to the node "4-registers-group:inst2|8-register:register3|inst9" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst7" to the node "4-registers-group:inst2|8-register:register3|inst11" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst7" to the node "4-registers-group:inst2|8-register:register3|inst13" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst7" to the node "4-registers-group:inst2|8-register:register3|inst15" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst3" to the node "4-registers-group:inst2|8-register:register1|inst1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst3" to the node "4-registers-group:inst2|8-register:register1|inst3" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst3" to the node "4-registers-group:inst2|8-register:register1|inst5" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst3" to the node "4-registers-group:inst2|8-register:register1|inst7" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst3" to the node "4-registers-group:inst2|8-register:register1|inst9" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst3" to the node "4-registers-group:inst2|8-register:register1|inst11" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst3" to the node "4-registers-group:inst2|8-register:register1|inst13" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst3" to the node "4-registers-group:inst2|8-register:register1|inst15" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst5" to the node "4-registers-group:inst2|8-register:register2|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst7" to the node "4-registers-group:inst2|8-register:register3|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "8-register:IR|inst3" to the node "4-registers-group:inst2|8-register:register1|inst" into an OR gate
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "4-registers-group:inst2|8-register:register2|inst1" to the node "selector:SelectorB|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "4-registers-group:inst2|8-register:register2|inst3" to the node "selector:SelectorB|inst5" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "4-registers-group:inst2|8-register:register2|inst5" to the node "selector:SelectorB|inst7" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "4-registers-group:inst2|8-register:register2|inst7" to the node "selector:SelectorB|inst9" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "4-registers-group:inst2|8-register:register2|inst9" to the node "selector:SelectorB|inst12" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "4-registers-group:inst2|8-register:register2|inst11" to the node "selector:SelectorB|inst15" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "4-registers-group:inst2|8-register:register2|inst13" to the node "selector:SelectorB|inst18" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "4-registers-group:inst2|8-register:register2|inst15" to the node "selector:SelectorB|inst21" into an OR gate
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "urd" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 188 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 129 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 86 warnings
+    Info: Peak virtual memory: 4613 megabytes
+    Info: Processing ended: Tue May 21 02:31:58 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
